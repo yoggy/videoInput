@@ -517,27 +517,28 @@ videoInput::videoInput(){
 	//The video types we support
 	//in order of preference
 
-	mediaSubtypes[0] 	= MEDIASUBTYPE_RGB24;
-	mediaSubtypes[1] 	= MEDIASUBTYPE_RGB32;
-	mediaSubtypes[2] 	= MEDIASUBTYPE_RGB555;
-	mediaSubtypes[3] 	= MEDIASUBTYPE_RGB565;
-	mediaSubtypes[4] 	= MEDIASUBTYPE_YUY2;
-	mediaSubtypes[5] 	= MEDIASUBTYPE_YVYU;
-	mediaSubtypes[6] 	= MEDIASUBTYPE_YUYV;
-	mediaSubtypes[7] 	= MEDIASUBTYPE_IYUV;
-	mediaSubtypes[8] 	= MEDIASUBTYPE_UYVY;
-	mediaSubtypes[9] 	= MEDIASUBTYPE_YV12;
-	mediaSubtypes[10]	= MEDIASUBTYPE_YVU9;
-	mediaSubtypes[11] 	= MEDIASUBTYPE_Y411;
-	mediaSubtypes[12] 	= MEDIASUBTYPE_Y41P;
-	mediaSubtypes[13] 	= MEDIASUBTYPE_Y211;
-	mediaSubtypes[14]	= MEDIASUBTYPE_AYUV;
+	// reordered by yoggy (give priority to MJPG)
+	mediaSubtypes[0]    = MEDIASUBTYPE_MJPG; // added by gameover
+	mediaSubtypes[1] 	= MEDIASUBTYPE_RGB24;
+	mediaSubtypes[2] 	= MEDIASUBTYPE_RGB32;
+	mediaSubtypes[3] 	= MEDIASUBTYPE_RGB555;
+	mediaSubtypes[4] 	= MEDIASUBTYPE_RGB565;
+	mediaSubtypes[5] 	= MEDIASUBTYPE_YUY2;
+	mediaSubtypes[6] 	= MEDIASUBTYPE_YVYU;
+	mediaSubtypes[7] 	= MEDIASUBTYPE_YUYV;
+	mediaSubtypes[8] 	= MEDIASUBTYPE_IYUV;
+	mediaSubtypes[9] 	= MEDIASUBTYPE_UYVY;
+	mediaSubtypes[10] 	= MEDIASUBTYPE_YV12;
+	mediaSubtypes[11]	= MEDIASUBTYPE_YVU9;
+	mediaSubtypes[12] 	= MEDIASUBTYPE_Y411;
+	mediaSubtypes[13] 	= MEDIASUBTYPE_Y41P;
+	mediaSubtypes[14] 	= MEDIASUBTYPE_Y211;
+	mediaSubtypes[15]	= MEDIASUBTYPE_AYUV;
 
 	//non standard
-	mediaSubtypes[15]	= MEDIASUBTYPE_Y800;
-    mediaSubtypes[16]	= MEDIASUBTYPE_Y8;
-	mediaSubtypes[17]	= MEDIASUBTYPE_GREY;
-	mediaSubtypes[18]	= MEDIASUBTYPE_MJPG; // added by gameover
+	mediaSubtypes[16]	= MEDIASUBTYPE_Y800;
+    mediaSubtypes[17]	= MEDIASUBTYPE_Y8;
+	mediaSubtypes[18]	= MEDIASUBTYPE_GREY;
 
 	//The video formats we support
 	formatTypes[VI_NTSC_M]		= AnalogVideo_NTSC_M;
